@@ -1,0 +1,4 @@
+/target
+.idea
+data/MNIST/raw
+data/train_test_data_mnist.safetensors
