@@ -17,8 +17,8 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
     // Labels: 60000 samples * 10
     let input_dims = 784;  // 28 * 28
     let output_dims = 10;  // 10 classes (digits 0-9)
-    let hidden_dims = 128;
-    let batch_size = 128;
+    let hidden_dims = 512;
+    let batch_size = 32;
     let epochs = 10;
 
     // Calculate number of samples from labels (labels.len() / 10)

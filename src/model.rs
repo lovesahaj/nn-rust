@@ -1,5 +1,5 @@
 use crate::{Matrix, matrix::{d_relu, d_softmax_cross_entropy, mat_cross_entropy, mat_element_wise_mul, mat_mul, mat_relu, mat_softmax, mat_sub}};
-const ETA: f32 = 1e-4;
+const ETA: f32 = 1e-3;
 
 #[derive(Debug)]
 pub struct NeuralNetwork {
@@ -56,8 +56,7 @@ impl NeuralNetwork {
 
         match y {
             Some(y) => {
-                let loss = mat_cross_entropy(&y_hat, y).map_err(|e| e.to_string())?;
-                println!("Loss: {}", loss);
+                // let loss = mat_cross_entropy(&y_hat, y).map_err(|e| e.to_string())?;
 
                 // STEP 1: Error at Output (dZ2)
                 // Shape: (Batch, Out)
